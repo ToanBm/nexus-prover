@@ -14,6 +14,8 @@ sudo curl https://sh.rustup.rs -sSf | sh
 ```Bash
 source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
+```
+```Bash
 rustc --version
 cargo --version
 ```
@@ -25,6 +27,11 @@ screen -S nexus
 ```Bash
 sudo curl https://cli.nexus.xyz/install.sh | sh
 ```
+- To detach from the screen session using `Ctrl + A + D`
+- To return screen
+  ```Bash
+  screen -r nexus
+  ```
 ## Done!
 ### Save your Prover ID
 ```Bash
