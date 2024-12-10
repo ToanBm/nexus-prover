@@ -1,43 +1,39 @@
-## Nexus-Prover
-### 1. Update packages
+## Nexus-Prover-Test
+### Step 1: Remove the Nexus Folder
+```Bash
+rm -rf ~/.nexus
+```
+### Step 2: Update System Packages
 ```Bash
 sudo apt update && sudo apt upgrade -y
 ```
-### 2. Install Dependecies
 ```Bash
-sudo apt install curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev  -y
+sudo apt install build-essential pkg-config libssl-dev git-all -y
 ```
-### 3. Install Rust
+### Step 3: Install Nexus CLI
 ```Bash
-sudo curl https://sh.rustup.rs -sSf | sh
+curl https://cli.nexus.xyz/ | sh
+```
+### Step 4: Change the Prover ID
+- Ctrl + C to stop CLI
+- Edit prover-ID
+```Bash
+nano ~/.nexus/prover-id
+```
+### Step 5: Run Nexus in a Screen Session
+```Bash
+screen -S nexus 
 ```
 ```Bash
-source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
+curl https://cli.nexus.xyz/ | sh
 ```
+- Press Ctrl + A, then D exit
+- To check your node
 ```Bash
-rustc --version
-cargo --version
-```
-### 4. Create Screen 
-```Bash
-screen -S nexus
-```
-### 5. Run Prover
-```Bash
-sudo curl https://cli.nexus.xyz/install.sh | sh
-```
-- To detach from the screen session using `Ctrl + A + D`
-- To return screen
-  ```Bash
-  screen -r nexus
-  ```
-## Done!
-### Save your Prover ID
-```Bash
-cat $HOME/.nexus/prover-id
+screen -r nexus 
 ```
 
+-----------------------------------------------------------------------------------------------
 
 
 
