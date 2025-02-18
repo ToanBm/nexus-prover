@@ -1,5 +1,20 @@
 ## Nexus-Prover-Test
-### Step 1: Remove the Nexus Folder
+- Create an account at: app.nexus.xyz
+- Follow the account linking instructions
+- Your contributions will earn NEX Points
+- Track your progress on the leaderboard
+- Manage all your nodes in one place
+
+### Step 1: Remove Old Nexus Node
+```Bash
+docker ps | grep nexus
+```
+```Bash
+docker ps -a | grep nexus
+```
+```Bash
+systemctl status nexus
+```
 ```Bash
 rm -rf ~/.nexus
 ```
