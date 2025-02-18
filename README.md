@@ -16,6 +16,14 @@ docker ps -a | grep nexus
 systemctl status nexus
 ```
 ```Bash
+sudo systemctl stop nexus
+sudo rm -f /etc/systemd/system/nexus.service
+```
+```Bash
+sudo systemctl daemon-reload
+sudo systemctl reset-failed
+```
+```Bash
 rm -rf ~/.nexus
 ```
 ### Step 2: Update System Packages
