@@ -66,7 +66,7 @@ curl https://cli.nexus.xyz/ | sh
 ```Bash
 screen -r nexus 
 ```
-### Fix RAM (Out of Memory Killer)
+### Fix RAM `(Out of Memory Killer)`
 ```Bash
 sudo dd if=/dev/zero of=/swapfile bs=1M count=10240 status=progress && \
 sudo chmod 600 /swapfile && \
@@ -75,6 +75,13 @@ sudo swapon /swapfile && \
 grep -q '/swapfile' /etc/fstab || echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && \
 sudo sysctl vm.swappiness=10 && \
 echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+```
+### Fix `experimental_allow_proto3_optional was not set`
+```Bash
+curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v25.1/protoc-25.1-linux-x86_64.zip && \\
+    unzip -o protoc-25.1-linux-x86_64.zip -d /usr/local bin/protoc && \\
+    unzip -o protoc-25.1-linux-x86_64.zip -d /usr/local 'include/*' && \\
+    rm -f protoc-25.1-linux-x86_64.zip
 ```
 
 -----------------------------------------------------------------------------------------------
