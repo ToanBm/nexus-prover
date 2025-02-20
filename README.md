@@ -52,7 +52,7 @@ curl https://cli.nexus.xyz/ | sh
 - Ctrl + C to stop CLI
 - Edit prover-ID
 ```Bash
-nano ~/.nexus/prover-id
+nano ~/.nexus/node-id
 ```
 ### Step 5: Run Nexus in a Screen Session
 ```Bash
