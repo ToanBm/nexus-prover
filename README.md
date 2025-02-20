@@ -34,9 +34,20 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential pkg-config libssl-dev git-all -y
 ```
 ### Step 3: Install Nexus CLI
+- Install Rust:
+```Bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+- Add the riscv32i target:
+```Bash
+rustup target add riscv32i-unknown-none-elf
+```
+- Install Script
 ```Bash
 curl https://cli.nexus.xyz/ | sh
 ```
+## *** Tới đây hỏi tiếp!!!!!
+
 ### Step 4: Change the Prover ID
 - Ctrl + C to stop CLI
 - Edit prover-ID
