@@ -66,6 +66,16 @@ curl https://cli.nexus.xyz/ | sh
 ```Bash
 screen -r nexus 
 ```
+### Fix RAM (Out of Memory Killer)
+```Bash
+sudo dd if=/dev/zero of=/swapfile bs=1M count=10240 status=progress && \
+sudo chmod 600 /swapfile && \
+sudo mkswap /swapfile && \
+sudo swapon /swapfile && \
+grep -q '/swapfile' /etc/fstab || echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && \
+sudo sysctl vm.swappiness=10 && \
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+```
 
 -----------------------------------------------------------------------------------------------
 
