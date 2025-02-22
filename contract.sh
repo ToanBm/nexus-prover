@@ -16,8 +16,9 @@ npm install
 
 # Step 2: Deploy the smart contract:
 # Create .env file for storing private key
-echo "Create .env file..."
+cd contracts
 
+echo "Create .env file..."
 read -p "Enter your EVM wallet private key (without 0x): " PRIVATE_KEY
 cat <<EOF > .env
 PRIVATE_KEY=$PRIVATE_KEY
