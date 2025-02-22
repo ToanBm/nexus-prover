@@ -42,8 +42,8 @@ for ((i=1; i<=NUMBER_OF_CONTRACTS; i++)); do
   echo "Deploying contract #$i..."
   npx hardhat run scripts/deploy.ts --network nexus
 
-  # Thời gian chờ ngẫu nhiên từ 3 đến 7 giây
-  RANDOM_DELAY=$(shuf -i 3-7 -n 1)  # Chọn số ngẫu nhiên từ 3 đến 7
+  # Thời gian chờ ngẫu nhiên từ 6 đến 9 giây
+  RANDOM_DELAY=$(shuf -i 5-9 -n 1)  # Chọn số ngẫu nhiên từ 5 đến 9
   echo "Waiting for $RANDOM_DELAY seconds before next deploy..."
   sleep $RANDOM_DELAY
 done
