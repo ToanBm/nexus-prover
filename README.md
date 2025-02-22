@@ -2,13 +2,12 @@
 ## Auto Setup
 ### 1. Clone the repository
 ```Bash
-git clone https://github.com/ToanBm/chainbase-testnet.git && cd chainbase-testnet
+git clone https://github.com/ToanBm/nexus-prover.git && cd nexus-prover
 ```
 ### 2. Run the setup script
 ```bash
 chmod +x contract.sh && ./contract.sh
 ```
-- Check your contract on Explorer! [Here](https://testnet.explorer.chainbase.com)
 
 ## Done!
 
