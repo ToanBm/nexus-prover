@@ -1,3 +1,17 @@
+# Deploying Nexus Contract
+## Auto Setup
+### 1. Clone the repository
+```Bash
+git clone https://github.com/ToanBm/chainbase-testnet.git && cd chainbase-testnet
+```
+### 2. Run the setup script
+```bash
+chmod +x contract.sh && ./contract.sh
+```
+- Check your contract on Explorer! [Here](https://testnet.explorer.chainbase.com)
+
+## Done!
+
 ## Nexus-Prover-Test
 - Create an account at: app.nexus.xyz
 - Follow the account linking instructions
